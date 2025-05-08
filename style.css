@@ -44,54 +44,7 @@ body, html {
   z-index: 99; /* supaya berada di atas elemen lain */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-Hasilnya:
-Tulisan "Maxime & Luna" akan muncul di bagian atas layar.
 
-Saat di-scroll, tulisan ini tetap berada di atas, seperti header aplikasi.
-
-Desainnya dibuat elegan dengan blur transparan agar tidak terlalu menutupi konten di belakangnya.
-
-Kalau kamu ingin saya masukkan langsung ke ZIP baru biar kamu tinggal unduh, tinggal bilang ya!
-
-
-
-
-
-
-
-You said:
-tetapi saya lupa kalau sebelum tulisan ini, saya ingin memberi tulisan "Buka Undangan", dengan motion yang elegan moderen, serta bisa di klik. dan setelah di klik akan keluar dibawahnya tulisan "Maxime & Luna"
-dan jadikan tulisan ini seperti header yang tidak akan tenggelam ke layar walupun layar di scrool
-
-
-ChatGPT said:
-Bagus! Jadi alurnya sekarang:
-
-Saat pertama dibuka, muncul tombol/tulisan elegan “Buka Undangan” di tengah layar.
-
-Saat diklik, baru muncul tulisan “Maxime & Luna” di atas sebagai sticky header.
-
-Efek pembuka dibuat elegan dan modern.
-
-Saya akan pandu secara lengkap dan ringkas agar kamu bisa langsung praktik atau saya juga bisa buatkan ZIP-nya nanti.
-
-✅ LANGKAH 1 – Tambahkan elemen HTML
-Tambahkan ini di dalam <body> di index.html, tepat di awal, setelah <body>:
-
-html
-Copy
-Edit
-<div id="opening" class="opening-screen">
-  <button id="openBtn" class="open-button">Buka Undangan</button>
-</div>
-
-<header id="stickyHeader" class="sticky-header hidden">
-  <h1>Maxime & Luna</h1>
-</header>
-✅ LANGKAH 2 – Tambahkan CSS di style.css
-css
-Copy
-Edit
 /* Tampilan awal buka undangan */
 .opening-screen {
   position: fixed;
