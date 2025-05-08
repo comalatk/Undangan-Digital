@@ -1,11 +1,14 @@
 // Ambil parameter nama dari URL
 function getNamaTamu() {
   const params = new URLSearchParams(window.location.search);
-  const nama = params.get("to");
+  let nama = params.get("to");
 
-  if (nama) {
-    document.getElementById("nama-tamu").textContent = decodeURIComponent(nama.replace(/\+/g, ' '));
+  if (!nama || nama.trim() === "") {
+    nama = "Tamu Undangan";
   }
+
+  document.getElementById("nama-tamu").textContent = decodeURIComponent(nama.replace(/\+/g, ' '));
+}
 }
 
 // Tampilkan konten undangan saat tombol diklik
