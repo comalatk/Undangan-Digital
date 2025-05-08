@@ -6,6 +6,24 @@ body, html {
   overflow-x: hidden;
 }
 
+/* Header tetap di atas */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); /* transparan elegan */
+  backdrop-filter: blur(8px); /* efek blur */
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #333;
+  z-index: 99; /* supaya berada di atas elemen lain */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Agar gambar pengantin memenuhi layar */
 .foto img {
   width: 100vw;
@@ -28,22 +46,6 @@ body, html {
   z-index: 2;
 }
 
-/* Header tetap di atas */
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7); /* transparan elegan */
-  backdrop-filter: blur(8px); /* efek blur */
-  text-align: center;
-  padding: 10px 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #333;
-  z-index: 99; /* supaya berada di atas elemen lain */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 
 
