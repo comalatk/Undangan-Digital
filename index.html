@@ -1,91 +1,37 @@
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
 
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('luna 1.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  <!-- Halaman Awal / Hero -->
+  <section class="hero" id="hero">
+    <div class="overlay">
+      <p>Kepada Yth.</p>
+      <p>Bapak/Ibu/Saudara/i :</p>
+      <p id="nama-tamu">Tamu Undangan</p>
+      <p>Di Tempat.</p>
+      <button id="buka-undangan">Buka Undangan</button>
+    </div>
+  </section>
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  color: #fff;
-  max-width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  <!-- Konten Undangan -->
+  <section id="konten-undangan" class="hidden">
+    <header class="sticky-header">
+      <h1>Maxime & Luna</h1>
+    </header>
 
-.overlay p {
-  margin: 0.5rem 0;
-  font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
-}
+    <div class="konten">
+      <p>Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+      <!-- Tambahkan konten lain -->
+    </div>
+  </section>
 
-#buka-undangan {
-  margin-top: 1.5rem;
-  padding: 0.6rem 1.5rem;
-  background-color: #a18cd1;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-#buka-undangan:hover {
-  background-color: #866dc0;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Konten Undangan */
-#konten-undangan {
-  padding: 3rem 1rem;
-  text-align: center;
-  animation: fadeIn 1s ease-in;
-}
-
-.konten p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 600px;
-  margin: 1rem auto;
-}
-
-/* Sticky Header */
-.sticky-header {
-  position: sticky;
-  top: 0;
-  background-color: #ffffffcc;
-  padding: 1rem 0;
-  text-align: center;
-  z-index: 100;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sticky-header h1 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #333;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  <script src="script.js"></script>
+</body>
+</html>
