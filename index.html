@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Undangan Pernikahan</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Hero Section -->
   <section class="hero">
     <img src="luna 1.jpg" alt="Pasangan Pengantin" class="hero-img">
     <div class="ucapan-overlay">
@@ -16,12 +18,21 @@
       <p id="nama-tamu">Tamu Undangan</p>
       <p>Di Tempat.</p>
     </div>
-
-
-<header id="stickyHeader" class="sticky-header hidden">
-  <h2>Maxime & Luna</h2>
-    
   </section>
+
+  <!-- Sticky Header -->
+  <header id="stickyHeader" class="sticky-header hidden">
+    <h2>Maxime & Luna</h2>
+  </header>
+
+  <!-- Popup Welcome -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>Selamat Datang!</h3>
+      <p>Terima kasih telah hadir dalam undangan pernikahan kami.</p>
+      <button onclick="tutupPopup()">Lanjut</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
