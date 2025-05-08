@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Undangan Pernikahan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio autoplay loop hidden>
-    <source src="lagu.mp3" type="audio/mpeg">
-  </audio>
-
-  <section class="hero">
-    <h1>Undangan Pernikahan</h1>
-    <h2>Untuk <span id="namaTamu">Tamu Undangan</span></h2>
-    <p>Kami mengundang Anda untuk hadir dalam pernikahan kami</p>
+  <section class="header">
+    <img src="assets/bg-header.png" alt="Ucapan" class="ucapan-overlay">
+    <div class="ucapan-teks">
+      <p>Kepada Yth.</p>
+      <p>Bapak/Ibu/Saudara/i :</p>
+      <p id="nama-tamu">Tamu Undangan</p>
+      <p>Di Tempat.</p>
+    </div>
   </section>
 
-  <section class="pasangan">
-    <h2>Feri & Hanifa</h2>
-    <p>Minggu, 25 Mei 2025</p>
+  <section class="foto">
+    <img src="assets/pasangan.jpg" alt="Pasangan Pengantin">
   </section>
 
-  <section class="galeri">
-    <h3>Foto Prewedding</h3>
-    <img src="foto1.jpg" alt="Foto 1" />
-    <img src="foto2.jpg" alt="Foto 2" />
-  </section>
-
-  <section class="video">
-    <h3>Video Prewed</h3>
-    <video controls>
-      <source src="video.mp4" type="video/mp4" />
-    </video>
-  </section>
-
-  <section class="alamat">
-    <h3>Lokasi Acara</h3>
-    <p>Balai Desa Mawar Indah, Kecamatan Bahagia, Kabupaten Sukacita</p>
-    <a href="https://maps.google.com" target="_blank">Lihat di Google Maps</a>
-  </section>
+  <!-- Tambahan konten lainnya nanti di sini -->
 
   <script src="script.js"></script>
 </body>
