@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  padding-bottom: 40px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #d63384;
+  text-align: center;
+}
+
+section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #eee;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+  padding-top: 60px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.galeri img {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.video video {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.alamat a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ffc107;
+  color: #212529;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.alamat a:hover {
+  background-color: #e0a800;
+}
