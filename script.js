@@ -1,5 +1,6 @@
-// Ambil parameter nama dari URL
-function getNamaTamu() {
+
+window.onload = function () {
+  // Ambil nama dari URL
   const params = new URLSearchParams(window.location.search);
   let nama = params.get("to");
 
@@ -8,16 +9,13 @@ function getNamaTamu() {
   }
 
   document.getElementById("nama-tamu").textContent = decodeURIComponent(nama.replace(/\+/g, ' '));
-}
-}
 
-// Tampilkan konten undangan saat tombol diklik
-document.getElementById("buka-undangan").addEventListener("click", function() {
-  document.getElementById("hero").classList.add("hidden");
-  document.getElementById("konten-undangan").classList.remove("hidden");
-});
-
-// Inisialisasi
-window.onload = function () {
-  getNamaTamu();
+  // Tambahkan event listener setelah elemen dimuat
+  const btn = document.getElementById("buka-undangan");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      document.getElementById("hero").classList.add("hidden");
+      document.getElementById("konten-undangan").classList.remove("hidden");
+    });
+  }
 };
