@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan</title>
+  <title>Undangan Pernikahan Luna & Maxime</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -18,125 +18,124 @@
       <p>Di Tempat.</p>
       <button id="buka-undangan">Buka Undangan</button>
     </div>
+  </section>
 
   <!-- Konten Undangan -->
   <section id="konten-undangan" class="hidden">
-    <!-- Sticky Header -->
+
+    <!-- Header Tetap -->
     <header class="sticky-header">
       <h1>Maxime & Luna</h1>
     </header>
 
     <div class="konten">
-      <!-- Bagian Foto dan Kutipan -->
-      <img src="luna 1,5.jpg" width="100%" height="auto" alt="Maxime & Luna">
-      <p>Wedding Days</p>
-      <p>Saturday, 17 Agustus 2025</p>
-      <p>Save The Date</p>
-      <p>Hidup bukan saling mendahului, bermimpilah sendiri sendiri<br><em>- Hindia, Baskara Putra -</em></p>
+      
+      <!-- Foto Pembuka -->
+      <img src="luna 1,5.jpg" width="100%" height="auto" alt="Foto Luna dan Maxime">
+      
+      <p class="tanggal">Save The Date</p>
+      <h3>Sabtu, 1 Agustus 2025</h3>
 
-      <img src="luna 2.jpg" width="100%" height="auto" alt="Quran quote">
-      <p>“Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya."<br><strong>QS. Ar-Rum : 21</strong></p>
+      <!-- Ayat & Kutipan -->
+      <blockquote>
+        “Hidup bukan saling mendahului, bermimpilah sendiri-sendiri.”<br>
+        <em>– Hindia, Baskara Putra</em>
+      </blockquote>
+
+      <img src="luna 2.jpg" width="100%" height="auto" alt="Foto Romantis">
+
+      <blockquote>
+        “Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan
+        untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya.”<br>
+        <em>QS. Ar-Rum : 21</em>
+      </blockquote>
+
       <p>Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
 
-      <!-- Save The Date Section -->
-      <section class="save-the-date">
-        <h2>Save The Date</h2>
-        <p class="tanggal">Friday, 1st August 2025</p>
+      <!-- Profil Mempelai -->
+      <section class="profil">
+        <h2>The Wedding</h2>
 
-        <div class="countdown" id="countdown">
-          <div><span id="days">00</span><small>Days</small></div>
-          <div><span id="hours">00</span><small>Hours</small></div>
-          <div><span id="minutes">00</span><small>Minutes</small></div>
-          <div><span id="seconds">00</span><small>Seconds</small></div>
+        <div class="mempelai">
+          <h3>Luna <br><span>@_istyxy</span></h3>
+          <p>Anak ke-1 dari 2 bersaudara</p>
+          <p>Bpk. Kadmina & Ibu Elisah</p>
         </div>
 
-        <div class="detail-acara">
-          <h3>AKAD</h3>
-          <p>08:00 WIB</p>
-          <p><strong>Gedung Suryanegara Gor Pamijahan</strong><br>
-            Pamijahan, Kec. Plumbon, Kabupaten Cirebon, Jawa Barat 45155</p>
-          <a href="https://maps.app.goo.gl/vtU1UXcoz91W6Zj57" target="_blank" class="btn-maps">Lihat di Google Maps</a>
+        <div class="mempelai">
+          <h3>Maxime <br><span>@pandji.al</span></h3>
+          <p>Anak ke-1 dari 2 bersaudara</p>
+          <p>Bpk. Ahmad Rifa'i & Ibu Herti</p>
         </div>
       </section>
 
+      <!-- Tanggal & Lokasi -->
+      <section class="akad">
+        <h2>Akad Nikah</h2>
+        <p><strong>Sabtu, 1 Agustus 2025</strong></p>
+        <p>Pukul 08:00 WIB</p>
+        <p>Gedung Suryanegara GOR Pamijahan<br>
+        Pamijahan, Kec. Plumbon, Kabupaten Cirebon, Jawa Barat 45155</p>
+        <a href="https://maps.google.com" target="_blank">Google Maps</a>
+      </section>
+
+      <!-- Doa & Ucapan -->
+      <section class="doa-ucapan">
+        <h2>Doa & Ucapan</h2>
+        <p>Berikan doa dan ucapan kepada kedua mempelai</p>
+
+        <!-- Komentar Dummy -->
+        <p><strong>51 Comments</strong></p>
+        <form>
+          <input type="text" placeholder="Nama" required>
+          <textarea placeholder="Ucapan" rows="4" required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
+
+      <!-- Wedding Love Gift -->
+      <section class="love-gift">
+        <h2>Wedding Love Gift</h2>
+        <p>
+          Apabila tamu ingin mengirimkan hadiah kepada kedua mempelai dapat melalui virtual account atau e-wallet:
+        </p>
+
+        <div class="rekening-box">
+          <p class="rekening-number" id="rekening">7745564216</p>
+          <p class="atas-nama">a.n Maxime</p>
+          <button onclick="copyRekening()">Copy Rekening</button>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery">
+        <h2>OUR GALLERY</h2>
+        <p class="gallery-subtitle">Life with you</p>
+        <div class="gallery-photos">
+          <img src="NZ5_6652.jpg" alt="Gallery 1">
+          <img src="NZ5_6603.jpg" alt="Gallery 2">
+          <img src="NZ5_6615.jpg" alt="Gallery 3">
+        </div>
+        <p class="gallery-caption">Allah yang mempertemukan kami berdua</p>
+      </section>
+
+      <!-- Penutup -->
+      <section class="closing">
+        <p class="with-love">With Love</p>
+        <h2>Luna & Maxime</h2>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Invitation by <strong>comalATK</strong></p>
+        <p>📞 <a href="https://wa.me/62811210593" target="_blank">+62 811 210 593</a></p>
+        <p><em>mahira creative</em></p>
+        <p>© 2025 comalATK. All rights reserved.</p>
+      </footer>
     </div>
   </section>
-  <section class="the-wedding">
-  <h2>THE WEDDING</h2>
 
-  <div class="mempelai">
-    <div class="mempelai-item">
-      <h3>Luna</h3>
-      <p><em>@istyxy</em></p>
-      <p>Anak pertama dari dua bersaudara</p>
-      <p>Putri dari:</p>
-      <p>Bpk. Kadmina & Ibu Elisah</p>
-    </div>
-
-    <div class="mempelai-item">
-      <h3>Maxime</h3>
-      <p><em>@pandji.al</em></p>
-      <p>Anak pertama dari dua bersaudara</p>
-      <p>Putra dari:</p>
-      <p>Bpk. Ahmad Rifa'i & Ibu Herti</p>
-    </div>
-  </div>
-</section>
-  <section class="doa-ucapan">
-  <h2>DOA & UCAPAN</h2>
-  <p>Berikan doa dan ucapan kepada kedua mempelai</p>
-  <p class="jumlah-komentar">51 Comments</p>
-
-  <form class="form-ucapan">
-    <input type="text" id="nama" name="nama" placeholder="Nama" required />
-    <textarea id="pesan" name="pesan" rows="4" placeholder="Ucapan" required></textarea>
-    <button type="submit">Kirim</button>
-  </form>
-
-  <div id="daftar-ucapan">
-    <!-- Komentar dari tamu akan tampil di sini -->
-  </div>
-
-      </section>
-<!-- Wedding Love Gift -->
-<section class="love-gift">
-  <h2>Wedding Love Gift</h2>
-  <p>Apabila tamu ingin mengirimkan hadiah kepada kedua mempelai dapat melalui virtual account atau e-wallet:</p>
-
-  <div class="rekening-box">
-    <p class="rekening-number" id="rekening">7745564216</p>
-    <p class="atas-nama">a.n Maxime</p>
-    <button onclick="copyRekening()">Copy Rekening</button>
-  </div>
-</section>
-
-<!-- OUR GALLERY -->
-<section class="gallery">
-  <h2>OUR GALLERY</h2>
-  <p class="gallery-subtitle">Life with you</p>
-  <div class="gallery-photos">
-    <img src="NZ5_6652.jpg" alt="Gallery 1">
-    <img src="NZ5_6603.jpg" alt="Gallery 2">
-    <img src="NZ5_6615.jpg" alt="Gallery 3">
-  </div>
-  <p class="gallery-caption">Allah yang mempertemukan kami berdua</p>
-</section>
-
-<!-- Penutup -->
-<section class="closing">
-  <p class="with-love">With Love</p>
-  <h2>Luna & Maxime</h2>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>Invitation by <strong>comalATK</strong></p>
-  <p>📞 <a href="https://wa.me/62811210593" target="_blank">+62 811 210 593</a></p>
-  <p><em>mahira creative</em></p>
-  <p>© 2025 comalATK. All rights reserved.</p>
-</footer>
-
-
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
