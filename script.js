@@ -165,6 +165,7 @@ form.addEventListener("submit", function (e) {
   if (nama && ucapan) {
     const commentSection = document.createElement("div");
     commentSection.innerHTML = `<p><strong>${nama}</strong>: ${ucapan}</p>`;
+    commentSection.classList.add("fade-in");
     form.insertAdjacentElement("beforebegin", commentSection);
 
     form.reset();
@@ -178,6 +179,7 @@ const namaSafe = escapeHTML(nama);
 const ucapanSafe = escapeHTML(ucapan);
 
 commentSection.innerHTML = `<p><strong>${namaSafe}</strong>: ${ucapanSafe}</p>`;
+
 
 // RSVP Tambahan (Optional)
 const rsvpForm = document.getElementById("form-rsvp");
