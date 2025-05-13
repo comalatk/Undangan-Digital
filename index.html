@@ -4,146 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Undangan Pernikahan Luna & Maxime</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-</head>
-<body>
-
-<!-- Pemutar Musik -->
-<div class="audio-player">
-  <audio id="wedding-audio" loop>
-    <source src="lagusania.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutar audio.
-  </audio>
-  <button id="toggle-audio" class="audio-btn">🔊</button>
-</div>
-
-<!-- Efek Sakura -->
-<canvas id="sakura-canvas"></canvas>
-
-<!-- Halaman Awal -->
-<section class="hero" id="hero">
-  <div class="overlay">
-    <p>Kepada Yth.</p>
-    <p>Bapak/Ibu/Saudara/i :</p>
-    <p id="nama-tamu">Tamu Undangan</p>
-    <p>Di Tempat.</p>
-    <button id="buka-undangan">Buka Undangan</button>
-  </div>
-</section>
-
-<!-- Konten Undangan -->
-<section id="konten-undangan" class="hidden">
-
-  <header class="sticky-header">
-    <h1>Maxime & Luna</h1>
-  </header>
-
-  <div class="konten">
-
-    <img src="luna 1.jpg" alt="Foto Luna dan Maxime" class="foto-pembuka"/>
-
-    <div class="tanggal-wrapper">
-      <p class="tanggal">
-        📅 <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Luna+%26+Maxime&dates=20250801T010000Z/20250801T030000Z&details=Acara+Pernikahan+Luna+%26+Maxime+di+Lapangan+Tribuana+Tunggal+Dewi,+Pemalang&location=Lapangan+Tribuana+Tunggal+Dewi,+Pemalang" target="_blank">Save The Date</a>
-      </p>
-      <h3>Sabtu, 1 Agustus 2025</h3>
-      <p>Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
-    </div>
-
-    <blockquote>“Hidup bukan saling mendahului, bermimpilah sendiri-sendiri.”<br><em>– Hindia, Baskara Putra</em></blockquote>
-    <img src="luna 2.jpg" alt="Foto Romantis" class="foto-romantis" />
-    <blockquote>“...agar kamu merasa tenteram kepadanya.”<br><em>QS. Ar-Rum : 21</em></blockquote>
-
-    <section class="profil">
-      <h2>The Wedding</h2>
-      <div class="mempelai">
-        <h3>Luna <br><span><a href="https://www.instagram.com/_luluna" target="_blank">@_luluna</a></span></h3>
-        <p>Anak ke-1 dari 2 bersaudara</p>
-        <p>Bpk. Luna & Ibu Luna</p>
-      </div>
-      <div class="mempelai">
-        <h3>Maxime <br><span><a href="https://www.instagram.com/maxmaxime" target="_blank">@maxmaxime</a></span></h3>
-        <p>Anak ke-1 dari 2 bersaudara</p>
-        <p>Bpk. Maxime & Ibu Maxime</p>
-      </div>
-    </section>
-
-    <section class="akad">
-      <h2>Akad Nikah</h2>
-      <p><strong>Sabtu, 1 Agustus 2025</strong></p>
-      <p>Pukul 08:00 WIB</p>
-
-      <div class="countdown" id="countdown">
-        <div><span id="days">00</span><br>Hari</div>
-        <div><span id="hours">00</span><br>Jam</div>
-        <div><span id="minutes">00</span><br>Menit</div>
-        <div><span id="seconds">00</span><br>Detik</div>
-      </div>
-
-      <p>Lapangan Tribuana Tunggal Dewi<br>Kebojongan, Pemalang, Jawa Tengah</p>
-      <a href="https://maps.app.goo.gl/xCq2Kk8ZmaFqNcm38" target="_blank">Google Maps</a>
-    </section>
-
-    <section class="doa-ucapan">
-      <h2>Doa & Ucapan</h2>
-      <form>
-        <input type="text" placeholder="Nama" required>
-        <textarea placeholder="Ucapan" rows="4" required></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </section>
-
-    <section class="love-gift">
-      <h2>Wedding Love Gift</h2>
-      <p>Ingin mengirim hadiah untuk mempelai? Silakan gunakan informasi berikut:</p>
-      <div class="rekening-box">
-        <p class="rekening-number" id="rekening">123456</p>
-        <p class="atas-nama">a.n Maxime</p>
-        <button onclick="copyRekening()">Copy Rekening</button>
-      </div>
-    </section>
-
-    <section class="gallery">
-      <h2>OUR GALLERY</h2>
-      <p class="gallery-subtitle">Life with you</p>
-      <div class="gallery-wrapper">
-        <div class="gallery-track">
-          <img src="luna 1.jpg" alt="1" />
-          <img src="luna 2.jpg" alt="2" />
-          <img src="luna 1.jpg" alt="3" />
-          <img src="luna 2.jpg" alt="4" />
-        </div>
-      </div>
-      <p class="gallery-caption">Allah yang mempertemukan kami berdua</p>
-    </section>
-
-    <section class="closing">
-      <p class="with-love">With Love</p>
-      <h2>Luna & Maxime</h2>
-    </section>
-
-    <footer class="footer">
-      <p>Invitation by <strong>comalATK</strong></p>
-      <p>📞 <a href="https://wa.me/62895416482181" target="_blank">+62 895 4164 82181</a></p>
-      <p><em>Mahira Creative</em></p>
-      <p>© 2025 ComalATK. All rights reserved.</p>
-    </footer>
-
-  </div>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html>
-
-
-<!--<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan Luna & Maxime</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -158,7 +18,7 @@
   <button id="toggle-audio" class="audio-btn">🔊</button>
 </div>
 
-<!--<canvas id="sakura-canvas"></canvas>-->
+<canvas id="sakura-canvas"></canvas>
   
   <!-- Halaman Awal / Hero -->
   <section class="hero" id="hero">
@@ -169,7 +29,7 @@
       <p>Di Tempat.</p>
       <button id="buka-undangan">Buka Undangan</button>
     </div>
-  </section> -->
+  </section>
 
   <!-- Konten Undangan -->
   <section id="konten-undangan" class="hidden">
@@ -204,7 +64,7 @@
         <em>QS. Ar-Rum : 21</em>
       </blockquote>
 
-      <pstyle="text-align: center; margin-top: 15px;">Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+      <p style="text-align: center; margin-top: 15px;">Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
 
       <!-- Profil Mempelai -->
       <section class="profil">
@@ -318,6 +178,67 @@
   const namaTamu = urlParams.get('to') || 'Tamu Undangan';
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('nama-tamu').textContent = decodeURIComponent(namaTamu.replace(/\+/g, ' '));
+  });
+</script>
+
+  <script>
+  // Sakura Falling Effect
+  const canvas = document.getElementById("sakura-canvas");
+  const ctx = canvas.getContext("2d");
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  const sakuraCount = 50;
+  const sakura = [];
+
+  for (let i = 0; i < sakuraCount; i++) {
+    sakura.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 4 + 1,
+      d: Math.random() * sakuraCount
+    });
+  }
+
+  function drawSakura() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = "rgba(255, 182, 193, 0.7)";
+    ctx.beginPath();
+    for (let i = 0; i < sakuraCount; i++) {
+      const p = sakura[i];
+      ctx.moveTo(p.x, p.y);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+    }
+    ctx.fill();
+    update();
+  }
+
+  let angle = 0;
+  function update() {
+    angle += 0.01;
+    for (let i = 0; i < sakuraCount; i++) {
+      const p = sakura[i];
+      p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+      p.x += Math.sin(angle) * 2;
+
+      if (p.y > height) {
+        sakura[i] = {
+          x: Math.random() * width,
+          y: 0,
+          r: p.r,
+          d: p.d
+        };
+      }
+    }
+  }
+
+  setInterval(drawSakura, 33);
+
+  // Resize canvas on window resize
+  window.addEventListener("resize", () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
   });
 </script>
 
