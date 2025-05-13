@@ -1,3 +1,62 @@
+function sakuraFall() {
+  const canvas = document.getElementById("sakura-canvas");
+  const ctx = canvas.getContext("2d");
+  let sakuraArray = [];
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  function Sakura() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height - canvas.height;
+    this.size = Math.random() * 5 + 5;
+    this.speed = Math.random() * 1 + 0.5;
+    this.wind = Math.random() * 0.5 - 0.25;
+
+    this.draw = function () {
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(255, 182, 193, 0.8)";
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    };
+
+    this.update = function () {
+      this.y += this.speed;
+      this.x += this.wind;
+
+      if (this.y > canvas.height) {
+        this.y = 0;
+        this.x = Math.random() * canvas.width;
+      }
+
+      this.draw();
+    };
+  }
+
+  function init() {
+    sakuraArray = [];
+    for (let i = 0; i < 80; i++) {
+      sakuraArray.push(new Sakura());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    sakuraArray.forEach(s => s.update());
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+}
+
+sakuraFall();
+
 // Buka Undangan
 document.getElementById("buka-undangan").addEventListener("click", () => {
   document.getElementById("hero").classList.add("hidden");
