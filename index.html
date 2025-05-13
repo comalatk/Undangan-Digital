@@ -4,6 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Undangan Pernikahan Luna & Maxime</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Pemutar Musik -->
+<div class="audio-player">
+  <audio id="wedding-audio" loop>
+    <source src="lagusania.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+  <button id="toggle-audio" class="audio-btn">🔊</button>
+</div>
+
+<!-- Efek Sakura -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Halaman Awal -->
+<section class="hero" id="hero">
+  <div class="overlay">
+    <p>Kepada Yth.</p>
+    <p>Bapak/Ibu/Saudara/i :</p>
+    <p id="nama-tamu">Tamu Undangan</p>
+    <p>Di Tempat.</p>
+    <button id="buka-undangan">Buka Undangan</button>
+  </div>
+</section>
+
+<!-- Konten Undangan -->
+<section id="konten-undangan" class="hidden">
+
+  <header class="sticky-header">
+    <h1>Maxime & Luna</h1>
+  </header>
+
+  <div class="konten">
+
+    <img src="luna1.jpg" alt="Foto Luna dan Maxime" class="foto-pembuka"/>
+
+    <div class="tanggal-wrapper">
+      <p class="tanggal">
+        📅 <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Luna+%26+Maxime&dates=20250801T010000Z/20250801T030000Z&details=Acara+Pernikahan+Luna+%26+Maxime+di+Lapangan+Tribuana+Tunggal+Dewi,+Pemalang&location=Lapangan+Tribuana+Tunggal+Dewi,+Pemalang" target="_blank">Save The Date</a>
+      </p>
+      <h3>Sabtu, 1 Agustus 2025</h3>
+      <p>Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+    </div>
+
+    <blockquote>“Hidup bukan saling mendahului, bermimpilah sendiri-sendiri.”<br><em>– Hindia, Baskara Putra</em></blockquote>
+    <img src="luna2.jpg" alt="Foto Romantis" class="foto-romantis" />
+    <blockquote>“...agar kamu merasa tenteram kepadanya.”<br><em>QS. Ar-Rum : 21</em></blockquote>
+
+    <section class="profil">
+      <h2>The Wedding</h2>
+      <div class="mempelai">
+        <h3>Luna <br><span><a href="https://www.instagram.com/_luluna" target="_blank">@_luluna</a></span></h3>
+        <p>Anak ke-1 dari 2 bersaudara</p>
+        <p>Bpk. Luna & Ibu Luna</p>
+      </div>
+      <div class="mempelai">
+        <h3>Maxime <br><span><a href="https://www.instagram.com/maxmaxime" target="_blank">@maxmaxime</a></span></h3>
+        <p>Anak ke-1 dari 2 bersaudara</p>
+        <p>Bpk. Maxime & Ibu Maxime</p>
+      </div>
+    </section>
+
+    <section class="akad">
+      <h2>Akad Nikah</h2>
+      <p><strong>Sabtu, 1 Agustus 2025</strong></p>
+      <p>Pukul 08:00 WIB</p>
+
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><br>Hari</div>
+        <div><span id="hours">00</span><br>Jam</div>
+        <div><span id="minutes">00</span><br>Menit</div>
+        <div><span id="seconds">00</span><br>Detik</div>
+      </div>
+
+      <p>Lapangan Tribuana Tunggal Dewi<br>Kebojongan, Pemalang, Jawa Tengah</p>
+      <a href="https://maps.app.goo.gl/xCq2Kk8ZmaFqNcm38" target="_blank">Google Maps</a>
+    </section>
+
+    <section class="doa-ucapan">
+      <h2>Doa & Ucapan</h2>
+      <form>
+        <input type="text" placeholder="Nama" required>
+        <textarea placeholder="Ucapan" rows="4" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <section class="love-gift">
+      <h2>Wedding Love Gift</h2>
+      <p>Ingin mengirim hadiah untuk mempelai? Silakan gunakan informasi berikut:</p>
+      <div class="rekening-box">
+        <p class="rekening-number" id="rekening">123456</p>
+        <p class="atas-nama">a.n Maxime</p>
+        <button onclick="copyRekening()">Copy Rekening</button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>OUR GALLERY</h2>
+      <p class="gallery-subtitle">Life with you</p>
+      <div class="gallery-wrapper">
+        <div class="gallery-track">
+          <img src="luna1.jpg" alt="1" />
+          <img src="luna2.jpg" alt="2" />
+          <img src="luna1.jpg" alt="3" />
+          <img src="luna2.jpg" alt="4" />
+        </div>
+      </div>
+      <p class="gallery-caption">Allah yang mempertemukan kami berdua</p>
+    </section>
+
+    <section class="closing">
+      <p class="with-love">With Love</p>
+      <h2>Luna & Maxime</h2>
+    </section>
+
+    <footer class="footer">
+      <p>Invitation by <strong>comalATK</strong></p>
+      <p>📞 <a href="https://wa.me/62895416482181" target="_blank">+62 895 4164 82181</a></p>
+      <p><em>Mahira Creative</em></p>
+      <p>© 2025 ComalATK. All rights reserved.</p>
+    </footer>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan Luna & Maxime</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -184,4 +324,4 @@
   <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
-</html>
+</html> -->
