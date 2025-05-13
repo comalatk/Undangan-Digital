@@ -166,6 +166,16 @@
     </div>
   </section>
 
+  <!-- Tambahkan ini di dalam <body> sebelum script.js -->
+<script>
+  // Ambil nama tamu dari parameter URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const namaTamu = urlParams.get('to') || 'Tamu Undangan';
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('nama-tamu').textContent = decodeURIComponent(namaTamu.replace(/\+/g, ' '));
+  });
+</script>
+
   <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
