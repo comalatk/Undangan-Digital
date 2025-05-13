@@ -1,61 +1,63 @@
-//function sakuraFall() {
- // const canvas = document.getElementById("sakura-canvas");
- // const ctx = canvas.getContext("2d");
- // let sakuraArray = [];
+function sakuraFall() {
+ const canvas = document.getElementById("sakura-canvas");
+ const ctx = canvas.getContext("2d");
+ let sakuraArray = [];
 
-//  canvas.width = window.innerWidth;
-//  canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+ canvas.height = window.innerHeight;
 
-//  window.addEventListener("resize", () => {
-  //  canvas.width = window.innerWidth;
-  //  canvas.height = window.innerHeight;
-//  });
+  window.addEventListener("resize", () => {
+   canvas.width = window.innerWidth;
+   canvas.height = window.innerHeight;
+   init();
+  });
 
-//  function Sakura() {
- //   this.x = Math.random() * canvas.width;
-  //  this.y = Math.random() * canvas.height - canvas.height;
-  //  this.size = Math.random() * 5 + 5;
-  //  this.speed = Math.random() * 1 + 0.5;
-   // this.wind = Math.random() * 0.5 - 0.25;
 
-  //  this.draw = function () {
-    //  ctx.beginPath();
-    //  ctx.fillStyle = "rgba(255, 182, 193, 0.8)";
-    //  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    //  ctx.fill();
-  //  };
+  function Sakura() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height - canvas.height;
+    this.size = Math.random() * 5 + 5;
+    this.speed = Math.random() * 1 + 0.5;
+    this.wind = Math.random() * 0.5 - 0.25;
 
-  //  this.update = function () {
-   //   this.y += this.speed;
-   //   this.x += this.wind;
+    this.draw = function () {
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(255, 182, 193, 0.8)";
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    };
 
-   //   if (this.y > canvas.height) {
-      //  this.y = 0;
-     //   this.x = Math.random() * canvas.width;
-     // }
+    this.update = function () {
+      this.y += this.speed;
+      this.x += this.wind;
 
-    //  this.draw();
-   // };
-//  }
+      if (this.y > canvas.height) {
+        this.y = 0;
+        this.x = Math.random() * canvas.width;
+      }
 
- // function init() {
-  //  sakuraArray = [];
- //   for (let i = 0; i < 80; i++) {
-   //   sakuraArray.push(new Sakura());
-  //  }
-//  }
+      this.draw();
+    };
+  }
 
-//  function animate() {
-  //  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  //  sakuraArray.forEach(s => s.update());
- //   requestAnimationFrame(animate);
-//  }
+  function init() {
+    sakuraArray = [];
+    for (let i = 0; i < 80; i++) {
+      sakuraArray.push(new Sakura());
+    }
+  }
 
- // init();
- // animate();
-//}
+ function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    sakuraArray.forEach(s => s.update());
+    requestAnimationFrame(animate);
+  }
 
-//sakuraFall();
+  init();
+  animate();
+}
+
+sakuraFall();
 
 // Buka Undangan
 document.getElementById("buka-undangan").addEventListener("click", () => {
@@ -124,16 +126,18 @@ function fadeAudioOut() {
   }, 200);
 }
 
-toggleBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    fadeAudioOut();
-    toggleBtn.innerText = "🔊";
-  } else {
-    fadeAudioIn();
-    toggleBtn.innerText = "⏸️";
-  }
-  isPlaying = !isPlaying;
-});
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      fadeAudioOut();
+      toggleBtn.innerText = "🔊";
+    } else {
+      fadeAudioIn();
+      toggleBtn.innerText = "⏸️";
+    }
+    isPlaying = !isPlaying;
+  });
+}
 
 // Slider Galeri Otomatis
 let currentScroll = 0;
@@ -141,17 +145,15 @@ const track = document.querySelector('.gallery-track');
 
 function autoSlideGallery() {
   if (track) {
-    currentScroll += 1;
+    currentScroll += 0.5; // Lebih halus
     if (currentScroll >= track.scrollWidth - track.clientWidth) {
       currentScroll = 0;
     }
-    track.scrollTo({
-      left: currentScroll,
-      behavior: 'smooth'
-    });
+    track.scrollLeft = currentScroll;
   }
 }
-setInterval(autoSlideGallery, 50);
+setInterval(autoSlideGallery, 20); // Lebih cepat interval, tapi pergerakan halus
+
 
 // Komentar Real-time Dummy
 const form = document.querySelector(".doa-ucapan form");
@@ -168,6 +170,14 @@ form.addEventListener("submit", function (e) {
     form.reset();
   }
 });
+
+const escapeHTML = (str) =>
+  str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+const namaSafe = escapeHTML(nama);
+const ucapanSafe = escapeHTML(ucapan);
+
+commentSection.innerHTML = `<p><strong>${namaSafe}</strong>: ${ucapanSafe}</p>`;
 
 // RSVP Tambahan (Optional)
 const rsvpForm = document.getElementById("form-rsvp");
